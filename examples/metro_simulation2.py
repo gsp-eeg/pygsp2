@@ -70,7 +70,7 @@ except FileExistsError:
         'Warning: It seems like this folder already exists. Overwritting...')
 
 # %% Download data
-assets_dir = os.path.join(current_dir, 'examples')
+assets_dir = os.path.join(current_dir, 'data')
 fetch_data(assets_dir, "metro")
 # %% Load graph and compute adjacency and node degree
 G, pos = make_metro_graph(

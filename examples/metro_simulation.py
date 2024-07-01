@@ -47,7 +47,7 @@ os.chdir(current_dir)
 MAKE_ANIMATION = True
 
 # %% Download data
-assets_dir = os.path.join(current_dir, 'examples')
+assets_dir = os.path.join(current_dir, 'data')
 fetch_data(assets_dir, "metro")
 
 

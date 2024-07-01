@@ -45,7 +45,7 @@ current_dir = os.getcwd()
 os.chdir(current_dir)
 
 # %% Load data
-assets_dir = os.path.join(current_dir, 'examples')
+assets_dir = os.path.join(current_dir, 'data')
 fetch_data(assets_dir, "metro")
 
 try:
