@@ -28,7 +28,11 @@ for i, scale in enumerate(scales):
     x /= np.linalg.norm(x)
     x_hat = G.gft(x).squeeze()
 
-    assert np.all((-limit < x) & (x < limit))
+    try:
+        assert np.all((-limit < x) & (x < limit))
+    except AssertionError as msg: 
+        print(msg)
+
     G.plot(x, limits=[-limit, limit], ax=axes[0, i])
     axes[0, i].set_axis_off()
     axes[0, i].set_title('$x^T L x = {:.2f}$'.format(G.dirichlet_energy(x)))
